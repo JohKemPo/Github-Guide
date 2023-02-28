@@ -14,6 +14,7 @@
 <a href="https://github.com/ryo-ma/github-profile-trophy"> github-profile-trophy</a><br>
 <a href="https://github.com/DenverCoder1/github-readme-streak-stats"> github-readme-streak-stats </a><br>
 <a href="https://github.com/Ashutosh00710/github-readme-activity-graph"> readme-activity-graph </a><br>
+<a href="https://github.com/luong-komorebi/Markdown-Tutorial/blob/master/README_pt-BR.md">Markdown Tutorial </a><br>
 <a href="https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks"> rCriar e realçar blocos de código</a><br>
 
 <br>
