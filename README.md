@@ -16,6 +16,8 @@
 <a href="https://github.com/Ashutosh00710/github-readme-activity-graph"> readme-activity-graph </a><br>
 <a href="https://github.com/luong-komorebi/Markdown-Tutorial/blob/master/README_pt-BR.md">Markdown Tutorial </a><br>
 <a href="https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks"> rCriar e realçar blocos de código</a><br>
+https://github.com/iuricode/padroes-de-commits
+https://medium.com/linkapi-solutions/conventional-commits-pattern-3778d1a1e657
 
 <br>
 
