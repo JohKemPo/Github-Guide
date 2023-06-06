@@ -18,6 +18,7 @@
 <a href="https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks"> rCriar e realçar blocos de código</a><br>
 https://github.com/iuricode/padroes-de-commits
 https://medium.com/linkapi-solutions/conventional-commits-pattern-3778d1a1e657
+https://blog.betrybe.com/git/git-branch/
 
 <br>
 
