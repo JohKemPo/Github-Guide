@@ -20,6 +20,17 @@ https://github.com/iuricode/padroes-de-commits
 https://medium.com/linkapi-solutions/conventional-commits-pattern-3778d1a1e657
 https://blog.betrybe.com/git/git-branch/
 
+
+<p>
+
+  Existem três soluções simples para copiar a última versão que está em seu repositório remoto, descartando todas as alterações que você fez localmente:
+
+Descarte seu repositório e clone novamente. Esta é a solução mais simples, mas se o seu repositório for grande, pode levar muito tempo e pode exigir esforço extra como re configureing, etc.
+
+Descarte as alterações locais com git reset --hard <hash>e faça um arquivo git pull. O problema é que você precisa primeiro encontrar um commit que precede qualquer histórico de alterações que você está tentando evitar. Depois de redefinir para esse hash de confirmação, faça um arquivo git pull.
+
+Faça um git fetchpara trazer as atualizações para sua referência local da ramificação remota (geralmente origem/mestre) e depois faça uma git reset --hardpassagem dessa referência, ou seja, git reset --hard origin/master.
+</p>
 <br>
 
 
