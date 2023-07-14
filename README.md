@@ -19,7 +19,7 @@
 https://github.com/iuricode/padroes-de-commits
 https://medium.com/linkapi-solutions/conventional-commits-pattern-3778d1a1e657
 https://blog.betrybe.com/git/git-branch/
-
+https://www.conventionalcommits.org/en/v1.0.0/#summary
 
 <p>
 
