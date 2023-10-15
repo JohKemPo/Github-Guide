@@ -1,4 +1,4 @@
-<h1 align = "center"> README CUSTOMIZATION [ EM PRODUÇÃO ]</h1>
+<!-- <h1 align = "center"> README CUSTOMIZATION [ EM PRODUÇÃO ]</h1>
 <h3 align = "center"> IN PROGRESS </h1>
 <br><br>
 
@@ -16,10 +16,10 @@
 <a href="https://github.com/Ashutosh00710/github-readme-activity-graph"> readme-activity-graph </a><br>
 <a href="https://github.com/luong-komorebi/Markdown-Tutorial/blob/master/README_pt-BR.md">Markdown Tutorial </a><br>
 <a href="https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks"> rCriar e realçar blocos de código</a><br>
-https://github.com/iuricode/padroes-de-commits
-https://medium.com/linkapi-solutions/conventional-commits-pattern-3778d1a1e657
-https://blog.betrybe.com/git/git-branch/
-https://www.conventionalcommits.org/en/v1.0.0/#summary
+<https://github.com/iuricode/padroes-de-commits>
+<https://medium.com/linkapi-solutions/conventional-commits-pattern-3778d1a1e657>
+<https://blog.betrybe.com/git/git-branch/>
+<https://www.conventionalcommits.org/en/v1.0.0/#summary>
 
 <p>
 
@@ -33,7 +33,6 @@ Faça um git fetchpara trazer as atualizações para sua referência local da ra
 </p>
 <br>
 
-
 <div align="center">
 <h2 align="center"> CARDS </h2>
 <br>
@@ -87,5 +86,12 @@ Faça um git fetchpara trazer as atualizações para sua referência local da ra
 
 </div>
 
-<br>
+<br> -->
+<h1 align = "center"> Guia prático de Git e Github</h1>
+<h2 id="Equipe">Equipe</h2><br>
 
+<div align="center">
+
+|     Desenvolvedor              |           GitHub             |       LinkedIn     |
+|--------------------------------|------------------------------|--------------------|
+|👤 João Vitor Moraes            |<https://github.com/JohKemPo>   |<https://www.linkedin.com/in/joao-vitor-de-moraes/>|
