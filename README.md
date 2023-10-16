@@ -266,11 +266,16 @@ git clone URL_do_Repositório
 ```
 
 ### git add: Adicionando alterações ao Staging area
-<p align = "justify"> &emsp;O comando <b><i>git add</i></b> é usado para adicionar alterações específicas de arquivos ao que é chamado de "Staging area". Isso prepara as alterações para serem incluídas no próximo commit.</p>
+<p align = "justify"> &emsp;O comando <b><i>git add</i></b> é usado para adicionar alterações específicas de arquivos ao que é chamado de <b><i>Staging area</b></i>. Isso prepara as alterações para serem incluídas no próximo commit.</p>
 
 - Exemplo:
+- Para adicionar arquivos especificos em estado `Untracked` ou `Modified`:
 ```
 git add nome_do_arquivo
+```
+- Para adicionar todos os arquivos em estado `Untracked` ou `Modified`:
+```
+git add .
 ```
 
 ### git commit: Criando um commit
@@ -280,6 +285,7 @@ git add nome_do_arquivo
 ```
 git commit -m "Mensagem do commit"
 ```
+
 ### git status: Verificando o status do repositório
 <p align = "justify"> &emsp;O comando <b><i>git status</i></b> permite verificar o estado atual do repositório, mostrando quais arquivos foram modificados, adicionados ao Staging area ou estão não rastreados.</p>
 
@@ -321,7 +327,9 @@ git reset HEAD~1
 
 <h2 id="capitulo3">rabalhando com Branches</h2>
 <h3 id="branches">Branches no Git</h3>
+
 ### O que é uma branch?
+
 <p align = "justify"> &emsp;Uma branch é uma ramificação independente no Git que permite desenvolver funcionalidades ou correções de forma isolada do ramo principal (geralmente chamado de "master" ou "main"). Entretanto, é possível criar branches com quaisquer nomes, comumente com os nomes das funcionalidades especificas em desenvolvimento.</p>
 
 ### Criando e alterando branches
