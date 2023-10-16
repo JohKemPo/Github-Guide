@@ -355,13 +355,13 @@ git branch -d nome_da_branch
 
 <h3 id="fluxo">Fluxo de Trabalho Básico</h3>
 
-**Criando e trabalhando em uma nova branch**
+### Criando e trabalhando em uma nova branch
 <p align="justify">&emsp; Use `git checkout -b nova_branch` para criar e alternar para uma nova branch em um único comando. Isso é útil ao iniciar uma nova funcionalidade ou correção.</p>
 
-**Fazendo commits em uma branch**
+### Fazendo commits em uma branch
 <p align="justify">&emsp; Depois de alternar para uma branch, você pode fazer commits normais usando `git commit `para salvar as alterações. Os commits são específicos para a branch em que você está trabalhando.</p>
 
-**Merging de uma branch**
+### Merging de uma branch
 <p align="justify">&emsp; Quando sua funcionalidade ou correção estiver pronta, você pode mesclá-la de volta à branch principal (por exemplo, `master` ou `main`) usando `git merge`. Isso incorpora suas alterações ao ramo principal do projeto.</p>
 
 <p align="justify">&emsp; Trabalhar com branches no Git permite um desenvolvimento organizado e colaborativo, onde várias funcionalidades ou correções podem ser desenvolvidas simultaneamente sem conflitos constantes.</p>
@@ -370,7 +370,7 @@ git branch -d nome_da_branch
 
 <p align="justify">&emsp; Repositórios no GitHub são a base de todo o desenvolvimento colaborativo. É onde você armazena, compartilha e colabora em projetos. </p>
 
-**Criando um Novo Repositório**
+### Criando um Novo Repositório
 
 Passos para criar um novo repositório no GitHub:
 1. Acesse o GitHub e faça login na sua conta.
@@ -386,34 +386,37 @@ Passos para criar um novo repositório no GitHub:
 
 <p align="justify">&emsp; Seu novo repositório foi criado no GitHub e está pronto para ser preenchido com seu código. Você receberá informações sobre como clonar o repositório em sua máquina local e iniciar o trabalho.</p>
 
-Configurações do Repositório
+### Configurações do Repositório
+
 Personalizando as configurações do repositório:
+
 Após criar o repositório, você pode personalizar suas configurações da seguinte forma:
 
-Configurações: Nesta seção, você pode definir configurações importantes, como opções de colaboração, acesso e configurações de segurança. Por exemplo, você pode adicionar colaboradores, definir permissões de acesso, habilitar a proteção de ramos e muito mais.
+- **Configurações:** Nesta seção, você pode definir configurações importantes, como opções de colaboração, acesso e configurações de segurança. Por exemplo, você pode adicionar colaboradores, definir permissões de acesso, habilitar a proteção de ramos e muito mais.
 
-Integrações: Configure integrações com outras ferramentas e serviços para automatizar fluxos de trabalho e aumentar a produtividade. O GitHub oferece uma ampla variedade de integrações, como integração contínua, rastreamento de problemas e implantação automática.
+- **Integrações:** Configure integrações com outras ferramentas e serviços para automatizar fluxos de trabalho e aumentar a produtividade. O GitHub oferece uma ampla variedade de integrações, como integração contínua, rastreamento de problemas e implantação automática.
 
-Notificações: Personalize as notificações que você deseja receber sobre atividades no repositório.
+- **Notificações:** Personalize as notificações que você deseja receber sobre atividades no repositório.
 
-Colaboradores: Adicione pessoas ou equipes como colaboradores, permitindo que eles contribuam para o repositório.
+- **Colaboradores:** Adicione pessoas ou equipes como colaboradores, permitindo que eles contribuam para o repositório.
 
-Segurança: Configure medidas de segurança, como verificação de Dependabot para atualizações de pacotes.
+- **Segurança:** Configure medidas de segurança, como verificação de Dependabot para atualizações de pacotes.
 
-Opções do GitHub Pages: Se desejar hospedar uma página da web a partir do seu repositório, você pode configurá-la aqui.
+- **Opções do GitHub Pages:** Se desejar hospedar uma página da web a partir do seu repositório, você pode configurá-la aqui.
 
-Transferir repositório: Se necessário, você pode transferir a propriedade do repositório para outra conta.
+- **Transferir repositório:** Se necessário, você pode transferir a propriedade do repositório para outra conta.
 
-.gitignore: Ignorando Arquivos Indesejados
-O arquivo .gitignore é uma parte fundamental de qualquer repositório Git. Ele permite que você especifique quais arquivos e diretórios devem ser ignorados pelo Git. A importância do .gitignore reside no fato de que ele ajuda a manter o repositório limpo e a evitar o rastreamento acidental de arquivos que não devem fazer parte do controle de versão.
+### .gitignore: Ignorando Arquivos Indesejados
+<p align="justify">&emsp;O arquivo `.gitignore` é uma parte fundamental de qualquer repositório Git. Ele permite que você especifique quais arquivos e diretórios devem ser ignorados pelo Git. A importância do `.gitignore` reside no fato de que ele ajuda a manter o repositório limpo e a evitar o rastreamento acidental de arquivos que não devem fazer parte do controle de versão.</p>
 
-Os tipos de arquivos que você geralmente deseja ignorar no .gitignore incluem:
+Os tipos de arquivos que você geralmente deseja ignorar no `.gitignore` incluem:
 
-Arquivos de compilação.
-Arquivos temporários.
-Arquivos de sistema.
-Dependências de terceiros (por exemplo, bibliotecas).
-Ao criar um arquivo .gitignore, você pode especificar padrões de correspondência para os arquivos a serem ignorados. Por exemplo:
+- Arquivos de compilação.
+- Arquivos temporários.
+- Arquivos de sistema.
+- Dependências de terceiros (por exemplo, bibliotecas).
+
+Ao criar um arquivo `.gitignore`, você pode especificar padrões de correspondência para os arquivos a serem ignorados. Por exemplo:
 
 ```
 # Ignorar arquivos de compilação
@@ -426,17 +429,21 @@ config.ini
 # Ignorar diretórios gerados
 build/
 ```
-O uso adequado do .gitignore ajuda a manter o repositório organizado e evita que arquivos desnecessários sejam incluídos nos commits.
+<p align="justify">&emsp;O uso adequado do `.gitignore` ajuda a manter o repositório organizado e evita que arquivos desnecessários sejam incluídos nos commits.</p>
 
-Clonando um Repositório
+<p align="justify">&emsp;Existem sites que constroem o `.gitignore` automaticamente para seu projeto, como por exemplo, o <a href="https://www.toptal.com/developers/gitignore">toptal</a>.</p>
+
+### Clonando um Repositório
+
 Para clonar um repositório do GitHub para sua máquina local:
-Abra o terminal (no caso do Linux ou macOS) ou use o Git Bash (no caso do Windows).
 
-Navegue até o diretório onde você deseja clonar o repositório.
+- Abra o terminal (no caso do Linux ou macOS) ou use o Git Bash (no caso do Windows).
 
-No GitHub, vá até o repositório que deseja clonar e clique no botão "Código."
+- Navegue até o diretório onde você deseja clonar o repositório.
 
-Copie a URL do repositório (por exemplo, "https://github.com/seunome/seurepo.git").
+- No GitHub, vá até o repositório que deseja clonar e clique no botão "Código."
+
+- Copie a URL do repositório (por exemplo, "https://github.com/seunome/seurepo.git").
 
 No terminal, digite o seguinte comando:
 ```
@@ -445,38 +452,40 @@ git clone URL_do_Repositório
 
 Agora você possui uma cópia local do repositório e pode começar a trabalhar em seus arquivos.
 
-Issues e Pull Requests
-Issues:
-As issues são usadas para rastrear problemas, sugestões, tarefas e melhorias em um repositório. Elas são úteis para manter o controle das discussões e do progresso do desenvolvimento. Para criar uma issue, siga estes passos:
+### Issues e Pull Requests
 
-No repositório, vá até a guia "Issues."
+**Issues:**
 
-Clique no botão "Nova issue."
+<p align="justify">&emsp;As issues são usadas para rastrear problemas, sugestões, tarefas e melhorias em um repositório. Elas são úteis para manter o controle das discussões e do progresso do desenvolvimento. Para criar uma issue, siga estes passos:</p>
 
-Preencha os detalhes, incluindo um título descritivo e um corpo explicando o problema ou sugestão.
+- No repositório, vá até a guia "Issues."
 
-Clique em "Criar issue."
+- Clique no botão "Nova issue."
 
-Pull Requests:
-Os pull requests são usados para propor alterações em um repositório. Eles são fundamentais para a colaboração e revisão de código. Para criar um pull request, siga estes passos:
+- Preencha os detalhes, incluindo um título descritivo e um corpo explicando o problema ou sugestão.
 
-Faça as alterações desejadas em uma branch no seu repositório.
+- Clique em "Criar issue."
 
-No GitHub, vá até o repositório e clique na guia "Pull Requests."
+**Pull Requests:**
 
-Clique no botão "Novo pull request."
+<p align="justify">&emsp;Os pull requests são usados para propor alterações em um repositório. Eles são fundamentais para a colaboração e revisão de código. Para criar um pull request, siga estes passos:</p>
 
-Escolha a base (a branch de destino) e a branch com suas alterações.
+- Faça as alterações desejadas em uma branch no seu repositório.
 
-Preencha os detalhes do pull request, incluindo um título e uma descrição.
+- No GitHub, vá até o repositório e clique na guia "Pull Requests."
 
-Clique em "Criar pull request."
+- Clique no botão "Novo pull request."
 
-Agora outros colaboradores podem revisar suas alterações, fazer comentários e, quando estiverem prontos, mesclar as alterações no repositório principal.
+- Escolha a base (a branch de destino) e a branch com suas alterações.
 
-Trabalhar com repositórios no GitHub é fundamental para o desenvolvimento colaborativo. Você pode criar, configurar e colaborar em projetos de software de forma eficaz, controlando seu código e facilitando a comunicação entre membros da equipe.
+- Preencha os detalhes do pull request, incluindo um título e uma descrição.
 
-Se você tiver mais perguntas específicas sobre como trabalhar com repositórios no GitHub ou a importância do .gitignore, sinta-se à vontade para perguntar.
+- Clique em "Criar pull request."
+
+<p align="justify">&emsp;Agora outros colaboradores podem revisar suas alterações, fazer comentários e, quando estiverem prontos, mesclar as alterações no repositório principal.</p>
+
+<p align="justify">&emsp;Trabalhar com repositórios no GitHub é fundamental para o desenvolvimento colaborativo. Você pode criar, configurar e colaborar em projetos de software de forma eficaz, controlando seu código e facilitando a comunicação entre membros da equipe.</p>
+
 
 1. [Colaboração no GitHub](#colaboracao)
 1. [Segurança](#seguranca)
