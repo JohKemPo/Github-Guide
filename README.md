@@ -130,13 +130,13 @@
 <br>
 
 <h2 id="capitulo1">Introdução</h2>
-<h3 id="">O que é o Git?</h3>
+<h2 id="">O que é o Git?</h2>
 <p align = "justify"> &emsp; O Git é um sistema de controle de versão distribuído que permite rastrear as mudanças em um conjunto de arquivos ao longo do tempo. Ele é amplamente utilizado para o gerenciamento de código fonte em projetos de desenvolvimento de software, mas pode ser usado para qualquer tipo de arquivo.</p>
 
-<h3 id="">O que é o GitHub?</h3>
+<h2 id="">O que é o GitHub?</h2>
 <p align = "justify"> &emsp; O GitHub é uma plataforma web que usa o Git para hospedar repositórios de código fonte e colaboração em projetos. Ele oferece recursos como controle de acesso, rastreamento de problemas (issues), solicitações de pull (pull requests) e muito mais.</p>
 
-<h3 id="">Vantagens do Versionamento de Código</h3>
+<h2 id="">Vantagens do Versionamento de Código</h2>
 <p align = "justify"> &emsp; O versionamento de código oferece uma série de benefícios que são fundamentais para o desenvolvimento de software colaborativo e gerenciamento de código-fonte. </p>
 
 1. **Colaboração Eficiente:** Permite que várias pessoas trabalhem em um projeto simultaneamente, rastreando quem fez quais alterações.
@@ -150,7 +150,7 @@
 5. **Recuperação de Versões Anteriores:** Possibilita a restauração de versões anteriores de um projeto, caso seja necessário reverter as alterações.
 
 
-<h3 id="">Tipos de Estado de um Arquivo</h3>
+<h2 id="">Tipos de Estado de um Arquivo</h2>
 <p align = "justify"> &emsp; Quando se trabalha com Git, os arquivos em um repositório podem estar em diferentes estados. Esses estados refletem o status do arquivo em relação ao controle de versão. Os quatro tipos principais de estados de um arquivo são:</p>
 
 1. **Untracked:** Arquivos que o Git não está rastreando. Isso significa que o Git não tem conhecimento desses arquivos. Para rastreá-los, você precisa adicioná-los ao Git.
@@ -164,7 +164,7 @@
 <p align = "justify"> &emsp;Entender e gerenciar esses estados é fundamental para o uso eficaz do Git, pois permite controlar quais alterações serão incluídas em um commit. O comando <b><i>git status</i></b> é usado para verificar o estado atual dos arquivos no repositório.</p>
 
 <h2 id="capitulo2">Git básico</h2>
-<h3 id="instalacao">Instalação Git</h3>
+<h2 id="instalacao">Instalação Git</h2>
 
 ### No Windows:
 
@@ -203,7 +203,7 @@ sudo apt-get install git
 git --version
 ```
 
-<h3 id="inicial">Configuração Inicial do Git</h3>
+<h2 id="inicial">Configuração Inicial do Git</h2>
 
 <p align = "justify"> &emsp; Quando você instala o Git pela primeira vez, é importante configurar algumas informações iniciais, como seu nome de usuário e endereço de email, para que seus commits sejam identificados corretamente. Aqui estão as principais configurações iniciais:</p>
 
@@ -233,7 +233,7 @@ git --version
   git config --list
   ```
 
-<h3 id="funfamental">Conceitos Fundamentais do Git</h3>
+<h2 id="funfamental">Conceitos Fundamentais do Git</h2>
 <p align = "justify"> &emsp; O Git é baseado em alguns conceitos fundamentais que são essenciais para entender como ele funciona:</p>
 
 - **Repositórios Git:** Um repositório Git é um diretório que contém todos os arquivos do seu projeto, juntamente com um banco de dados especial para rastrear as alterações (histórico).
@@ -246,7 +246,7 @@ git --version
 
 - **Working Directory, Staging Area e Repository:** O Working Directory é onde você faz as alterações nos arquivos. O Staging Area é onde você prepara as alterações para serem commitadas. O Repository é onde todas as alterações são armazenadas.
 
-<h3 id="basico">Comandos Básicos do Git</h3>
+<h2 id="basico">Comandos Básicos do Git</h2>
 <p align = "justify"> &emsp; O Git oferece uma variedade de comandos fundamentais que são essenciais para o gerenciamento de repositórios. Aqui estão os principais comandos e suas descrições:</p>
 
 ### git init: Iniciando um repositório Git
@@ -325,8 +325,8 @@ git reset HEAD~1
 ### Comandos para Modificar o Estado de um Arquivo
 <p align = "justify"> &emsp;Além dos comandos mencionados acima, também é possível usar git checkout para desfazer alterações não salvas em um arquivo específico e git reset para mover arquivos do estado "staged" para "unmodified" ou "modified".</p>
 
-<h2 id="capitulo3">rabalhando com Branches</h2>
-<h3 id="branches">Branches no Git</h3>
+<h2 id="capitulo3">Trabalhando com Branches</h2>
+<h2 id="branches">Branches no Git</h2>
 
 ### O que é uma branch?
 
@@ -347,21 +347,21 @@ git checkout nome_da_branch
 git branch -d nome_da_branch
 ```
 
-<h3 id="merges">Merges e Conflitos</h3>
+<h2 id="merges">Merges e Conflitos</h2>
 
 **Merging de branches**
 
 <p align="justify">&emsp; O comando `git merge nome_da_branch` é usado para mesclar o conteúdo de uma branch em outra. Isso integra as alterações feitas em uma branch à branch de destino.</p>
 
-**Resolvendo conflitos de merge**
+### **Resolvendo conflitos de merge**
 
 <p align="justify">&emsp; Quando o Git não pode mesclar automaticamente as alterações de duas branches devido a conflitos, você precisará resolver manualmente os conflitos. Isso envolve editar os arquivos com conflitos, adicioná-los ao estágio (usando `git add`) e, em seguida, criar um novo commit.</p>
 
-**Rebase vs. Merge**
+### **Rebase vs. Merge**
 
 <p align="justify">&emsp; O `rebase` é uma alternativa ao merge. Ele reorganiza o histórico de commits, "movendo" suas alterações para o topo da branch de destino, resultando em um histórico linear. O `merge` cria um novo commit de mesclagem, mantendo o histórico original.</p>
 
-<h3 id="fluxo">Fluxo de Trabalho Básico</h3>
+<h2 id="fluxo">Fluxo de Trabalho Básico</h2>
 
 ### Criando e trabalhando em uma nova branch
 <p align="justify">&emsp; Use `git checkout -b nova_branch` para criar e alternar para uma nova branch em um único comando. Isso é útil ao iniciar uma nova funcionalidade ou correção.</p>
@@ -374,7 +374,7 @@ git branch -d nome_da_branch
 
 <p align="justify">&emsp; Trabalhar com branches no Git permite um desenvolvimento organizado e colaborativo, onde várias funcionalidades ou correções podem ser desenvolvidas simultaneamente sem conflitos constantes.</p>
 
-<h3 id="repositorios">Trabalhando com Repositórios</h3>
+<h2 id="repositorios">Trabalhando com Repositórios</h2>
 
 <p align="justify">&emsp; Repositórios no GitHub são a base de todo o desenvolvimento colaborativo. É onde você armazena, compartilha e colabora em projetos. </p>
 
@@ -414,7 +414,62 @@ Após criar o repositório, você pode personalizar suas configurações da segu
 
 - **Transferir repositório:** Se necessário, você pode transferir a propriedade do repositório para outra conta.
 
+### Clonando um Repositório
+
+Para clonar um repositório do GitHub para sua máquina local:
+
+- Abra o terminal (no caso do Linux ou macOS) ou use o Git Bash (no caso do Windows).
+
+- Navegue até o diretório onde você deseja clonar o repositório.
+
+- No GitHub, vá até o repositório que deseja clonar e clique no botão "Código."
+
+- Copie a URL do repositório (por exemplo, "https://github.com/seunome/seurepo.git").
+
+No terminal, digite o seguinte comando:
+```
+git clone URL_do_Repositório
+```
+
+Agora você possui uma cópia local do repositório e pode começar a trabalhar em seus arquivos.
+
+### Issues e Pull Requests
+
+### **Issues:**
+
+<p align="justify">&emsp;As issues são usadas para rastrear problemas, sugestões, tarefas e melhorias em um repositório. Elas são úteis para manter o controle das discussões e do progresso do desenvolvimento. Para criar uma issue, siga estes passos:</p>
+
+- No repositório, vá até a guia "Issues."
+
+- Clique no botão "Nova issue."
+
+- Preencha os detalhes, incluindo um título descritivo e um corpo explicando o problema ou sugestão.
+
+- Clique em "Criar issue."
+
+### **Pull Requests:**
+
+<p align="justify">&emsp;Os pull requests são usados para propor alterações em um repositório. Eles são fundamentais para a colaboração e revisão de código. Para criar um pull request, siga estes passos:</p>
+
+- Faça as alterações desejadas em uma branch no seu repositório.
+
+- No GitHub, vá até o repositório e clique na guia "Pull Requests."
+
+- Clique no botão "Novo pull request."
+
+- Escolha a base (a branch de destino) e a branch com suas alterações.
+
+- Preencha os detalhes do pull request, incluindo um título e uma descrição.
+
+- Clique em "Criar pull request."
+
+<p align="justify">&emsp;Agora outros colaboradores podem revisar suas alterações, fazer comentários e, quando estiverem prontos, mesclar as alterações no repositório principal.</p>
+
+<p align="justify">&emsp;Trabalhar com repositórios no GitHub é fundamental para o desenvolvimento colaborativo. Você pode criar, configurar e colaborar em projetos de software de forma eficaz, controlando seu código e facilitando a comunicação entre membros da equipe.</p>
+
+
 ### .gitignore: Ignorando Arquivos Indesejados
+
 <p align="justify">&emsp;O arquivo `.gitignore` é uma parte fundamental de qualquer repositório Git. Ele permite que você especifique quais arquivos e diretórios devem ser ignorados pelo Git. A importância do `.gitignore` reside no fato de que ele ajuda a manter o repositório limpo e a evitar o rastreamento acidental de arquivos que não devem fazer parte do controle de versão.</p>
 
 Os tipos de arquivos que você geralmente deseja ignorar no `.gitignore` incluem:
@@ -441,61 +496,71 @@ build/
 
 <p align="justify">&emsp;Existem sites que constroem o `.gitignore` automaticamente para seu projeto, como por exemplo, o <a href="https://www.toptal.com/developers/gitignore">toptal</a>.</p>
 
-### Clonando um Repositório
+<h2 id="colaboracao">Colaboração no GitHub</h2>
 
-Para clonar um repositório do GitHub para sua máquina local:
+### **Colaboradores e Permissões**
 
-- Abra o terminal (no caso do Linux ou macOS) ou use o Git Bash (no caso do Windows).
+<p align="justify">&emsp;O GitHub permite adicionar colaboradores a um repositório e definir permissões específicas para eles. Isso ajuda a controlar quem pode contribuir e de que forma.</p>
 
-- Navegue até o diretório onde você deseja clonar o repositório.
+Adicionando Colaboradores
 
-- No GitHub, vá até o repositório que deseja clonar e clique no botão "Código."
+- Acesse o repositório no GitHub.
+- Clique em "Settings" no menu do repositório.
+- Na guia "Manage access," você pode adicionar colaboradores pelo nome de usuário ou endereço de e-mail.
 
-- Copie a URL do repositório (por exemplo, "https://github.com/seunome/seurepo.git").
+### **Permissões**
 
-No terminal, digite o seguinte comando:
+As permissões padrão no GitHub incluem:
+
+- Read: Pode visualizar o repositório.
+- Write: Pode fazer commits e enviar alterações.
+- Admin: Tem controle total, incluindo permissões de acesso e exclusão.
+
+### **Forking de Repositórios**
+
+<p align="justify">&emsp;Forking é uma funcionalidade essencial no GitHub que permite criar uma cópia independente de um repositório. Isso é útil quando você deseja contribuir para projetos de terceiros.</p>
+
+Como fazer Fork de um Repositório
+
+- Acesse o repositório que deseja forkar.
+- Clique no botão "Fork" no canto superior direito.
+- Isso criará uma cópia do repositório em sua conta.
+
+### **Trabalhando em Colaboração**
+
+<p align="justify">&emsp;Uma vez que você tenha um fork do repositório, você pode trabalhar nas suas alterações. Aqui estão os passos gerais para trabalhar em colaboração:</p>
+
+1. Clone o fork para o seu ambiente de desenvolvimento local.
+    ```
+    git clone URL_do_Seufork
+    ```
+1. Crie uma branch para a funcionalidade que deseja desenvolver.
+    ```
+    git checkout -b minha_branch
+    ```
+1. Faça suas alterações no código.
+1. Adicione e faça commit das suas alterações.
 ```
-git clone URL_do_Repositório
+git add .
+git commit -m "Minha mensagem de commit"
 ```
+1. Faça push das alterações para o seu fork.
+```
+git push origin minha_branch
+```
+1. No GitHub, crie um Pull Request para o repositório original.
 
-Agora você possui uma cópia local do repositório e pode começar a trabalhar em seus arquivos.
+### **Revisão de Código**
 
-### Issues e Pull Requests
+<p align="justify">&emsp;Um dos aspectos mais importantes da colaboração no GitHub é a revisão de código. Quando você cria um Pull Request, outros colaboradores podem analisar suas alterações e fazer comentários.</p>
 
-**Issues:**
+- Os revisores podem fazer sugestões ou aprovar as alterações.
+- O autor do Pull Request pode fazer alterações com base nos comentários. 
 
-<p align="justify">&emsp;As issues são usadas para rastrear problemas, sugestões, tarefas e melhorias em um repositório. Elas são úteis para manter o controle das discussões e do progresso do desenvolvimento. Para criar uma issue, siga estes passos:</p>
-
-- No repositório, vá até a guia "Issues."
-
-- Clique no botão "Nova issue."
-
-- Preencha os detalhes, incluindo um título descritivo e um corpo explicando o problema ou sugestão.
-
-- Clique em "Criar issue."
-
-**Pull Requests:**
-
-<p align="justify">&emsp;Os pull requests são usados para propor alterações em um repositório. Eles são fundamentais para a colaboração e revisão de código. Para criar um pull request, siga estes passos:</p>
-
-- Faça as alterações desejadas em uma branch no seu repositório.
-
-- No GitHub, vá até o repositório e clique na guia "Pull Requests."
-
-- Clique no botão "Novo pull request."
-
-- Escolha a base (a branch de destino) e a branch com suas alterações.
-
-- Preencha os detalhes do pull request, incluindo um título e uma descrição.
-
-- Clique em "Criar pull request."
-
-<p align="justify">&emsp;Agora outros colaboradores podem revisar suas alterações, fazer comentários e, quando estiverem prontos, mesclar as alterações no repositório principal.</p>
-
-<p align="justify">&emsp;Trabalhar com repositórios no GitHub é fundamental para o desenvolvimento colaborativo. Você pode criar, configurar e colaborar em projetos de software de forma eficaz, controlando seu código e facilitando a comunicação entre membros da equipe.</p>
+<p align="justify">&emsp;Essa abordagem ajuda a manter a qualidade do código e a promover a colaboração eficaz entre membros da equipe ou da comunidade.</p>
 
 
-1. [Colaboração no GitHub](#colaboracao)
+
 1. [Segurança](#seguranca)
 
 <h2 id="Equipe">Equipe</h2><br>
