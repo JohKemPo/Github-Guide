@@ -39,21 +39,21 @@
    - Tipos de estado de um arquivo
 
 2. [Capítulo 1: Git Básico](#capitulo2)
-    1. Instalação do Git
+    1. [Instalação do Git](#instalacao)
         - Como instalar o Git no Windows
         - Como instalar o Git no macOS
         - Como instalar o Git no Linux
-    1. Configuração Inicial do Git
+    1. [Configuração Inicial do Git](#inicial)
         - Configurando seu nome de usuário e email
         - Configurando seu editor de texto preferido
         - Configurações globais e locais do Git
-    1. Conceitos Fundamentais do Git
+    1. [Conceitos Fundamentais do Git](#funfamental)
         - Repositórios Git
         - Commits
         - Branches
         - Tags
         - Working directory, Staging area e Repository
-    1. Comandos Básicos do Git
+    1. [Comandos Básicos do Git](#basico)
         - git init: Iniciando um repositório Git
         - git clone: Clonando um repositório
         - git add: Adicionando alterações ao Staging area
@@ -65,34 +65,34 @@
         - Comandos para Modificar o Estado de um Arquivo
 
 3. [Capítulo 2: Trabalhando com Branches](#capitulo3)
-    1. Branches no Git
+    1. [Branches no Git](#)
         - O que é uma branch?
         - Criando e alterando branches
         - Excluindo branches
-    1. Merges e Conflitos
+    1. [Merges e Conflitos](#)
         - Merging de branches
         - Resolvendo conflitos de merge
         - Rebase vs. Merge
-    1. Fluxo de Trabalho Básico
+    1. [Fluxo de Trabalho Básico](#)
         - Criando e trabalhando em uma nova branch
         - Fazendo commits em uma branch
         - Merging de uma branch
 
 4. [Capítulo 3: GitHub](#capitulo4)
-    1. Criando uma Conta no GitHub
+    1. [Criando uma Conta no GitHub](#)
         - Configurando seu perfil
         - Criando uma organização (se aplicável)
-    2. Trabalhando com Repositórios
+    2. [Trabalhando com Repositórios](#)
         - Criando um novo repositório
         - Configurações do repositório
         - Clonando um repositório
         - Issues e Pull Requests
-    1. Colaboração no GitHub
+    1. [Colaboração no GitHub](#)
         - Colaboradores e permissões
         - Forking de repositórios
         - Trabalhando em colaboração
         - Revisão de código
-    1. Segurança
+    1. [Segurança](#)
       - Chave SSH
       - Token
 
@@ -156,9 +156,164 @@
 
 1. **Modified:** Arquivos que foram alterados desde o último commit. Quando você faz alterações em um arquivo rastreado, ele entra neste estado.
 
-<p align = "justify"> &emsp;Entender e gerenciar esses estados é fundamental para o uso eficaz do Git, pois permite controlar quais alterações serão incluídas em um commit. O comando `git status` é usado para verificar o estado atual dos arquivos no repositório.</p>
+<p align = "justify"> &emsp;Entender e gerenciar esses estados é fundamental para o uso eficaz do Git, pois permite controlar quais alterações serão incluídas em um commit. O comando <b><i>git status</i></b> é usado para verificar o estado atual dos arquivos no repositório.</p>
 
-<p align = "justify"> &emsp;</p>
+<h2 id="capitulo2">Git básico</h2>
+<h3 id="instalacao">Instalação Git</h3>
+
+### No Windows:
+
+1. Acesse o site oficial do Git para Windows em https://git-scm.com/download/win.
+1. Baixe o instalador para Windows.
+1. Execute o arquivo de instalação baixado.
+1. Siga as instruções do instalador, aceitando as configurações padrão, a menos que você tenha necessidades específicas.
+1. Após a instalação, você pode verificar se o Git foi instalado corretamente executando o seguinte comando no Terminal:
+```
+git --version
+```
+
+### No macOS:
+
+1. Use o Homebrew, um gerenciador de pacotes, para instalar o Git. Abra o Terminal e execute o seguinte comando:
+
+```powershell
+brew install git
+```
+1. Baixe o instalador para Windows.
+1. Execute o arquivo de instalação baixado.
+1. Siga as instruções do instalador, aceitando as configurações padrão, a menos que você tenha necessidades específicas.
+1. Após a instalação, você pode verificar se o Git foi instalado corretamente executando o seguinte comando no Terminal:
+```
+git --version
+```
+
+### No Linux (Debian/Ubuntu):
+
+1. No terminal execute o comando a seguir para instalar o Git:
+```
+sudo apt-get install git
+```
+1. Após a instalação, você pode verificar se o Git foi instalado corretamente executando o seguinte comando no Terminal:
+```
+git --version
+```
+
+<h3 id="inicial">Configuração Inicial do Git</h3>
+
+<p align = "justify"> &emsp; Quando você instala o Git pela primeira vez, é importante configurar algumas informações iniciais, como seu nome de usuário e endereço de email, para que seus commits sejam identificados corretamente. Aqui estão as principais configurações iniciais:</p>
+
+- Configurando seu nome de usuário e email:
+
+  - Use os comandos git config para definir seu nome de usuário e endereço de email globalmente, para que sejam usados em todos os repositórios Git.
+  - Exemplo:
+  ```
+  git config --global user.name "Seu Nome"
+  git config --global user.email "seu@email.com"
+  ```
+  
+- Configurando seu editor de texto preferido (Opicional):
+
+  - Você pode escolher o editor de texto que deseja usar ao escrever mensagens de commit. Isso é configurado globalmente.
+  - Exemplo: 
+  ```
+  git config --global core.editor "seu_editor_preferido"
+  ```
+
+- Configurações globais e locais do Git:
+  - As configurações do Git podem ser definidas globalmente ou localmente para um repositório específico.
+  - Configurações globais se aplicam a todos os repositórios em sua máquina.
+  - Configurações locais se aplicam apenas a um repositório específico.
+  - Para listar as cofigurações globais:
+  ```
+  git config --list
+  ```
+
+<h3 id="funfamental">Conceitos Fundamentais do Git</h3>
+<p align = "justify"> &emsp; O Git é baseado em alguns conceitos fundamentais que são essenciais para entender como ele funciona:</p>
+
+- **Repositórios Git:** Um repositório Git é um diretório que contém todos os arquivos do seu projeto, juntamente com um banco de dados especial para rastrear as alterações (histórico).
+
+- **Commits:** Um commit é um snapshot do estado do seu projeto em um determinado momento. Cada commit tem uma mensagem descritiva que explica o que foi alterado.
+
+- **Branches:** As branches são ramificações do desenvolvimento do seu projeto. Elas permitem que você trabalhe em funcionalidades ou correções separadamente, sem afetar o código principal.
+
+- **Tags:** As tags são usadas para marcar pontos específicos no histórico do Git, como versões estáveis ou marcos importantes.
+
+- **Working Directory, Staging Area e Repository:** O Working Directory é onde você faz as alterações nos arquivos. O Staging Area é onde você prepara as alterações para serem commitadas. O Repository é onde todas as alterações são armazenadas.
+
+<h3 id="basico">Comandos Básicos do Git</h3>
+<p align = "justify"> &emsp; O Git oferece uma variedade de comandos fundamentais que são essenciais para o gerenciamento de repositórios. Aqui estão os principais comandos e suas descrições:</p>
+
+### git init: Iniciando um repositório Git
+<p align = "justify"> &emsp;O comando <b><i>git init</i></b> é usado para iniciar um novo repositório Git em um diretório. Isso cria um ambiente de controle de versão para os arquivos naquele diretório.</p>
+
+- Exemplo:
+```
+git init
+```
+
+### git clone: Clonando um repositório
+<p align = "justify"> &emsp;O comando <b><i>git clone</i></b> permite criar uma cópia local de um repositório Git remoto. Isso é útil quando você deseja colaborar em um projeto existente ou trabalhar em diferentes máquinas.</p>
+
+- Exemplo:
+```
+git clone URL_do_Repositório
+```
+
+### git add: Adicionando alterações ao Staging area
+<p align = "justify"> &emsp;O comando <b><i>git add</i></b> é usado para adicionar alterações específicas de arquivos ao que é chamado de "Staging area". Isso prepara as alterações para serem incluídas no próximo commit.</p>
+
+- Exemplo:
+```
+git add nome_do_arquivo
+```
+
+### git commit: Criando um commit
+<p align = "justify"> &emsp;O comando <b><i>git commit</i></b> é usado para criar um novo commit que inclui todas as alterações que estão no Staging area. Cada commit deve ter uma mensagem descritiva.</p>
+
+- Exemplo:
+```
+git commit -m "Mensagem do commit"
+```
+### git status: Verificando o status do repositório
+<p align = "justify"> &emsp;O comando <b><i>git status</i></b> permite verificar o estado atual do repositório, mostrando quais arquivos foram modificados, adicionados ao Staging area ou estão não rastreados.</p>
+
+- Exemplo:
+```
+git status
+```
+
+### git log: Visualizando o histórico de commits
+<p align = "justify"> &emsp;O comando <b><i>git log</i></b> é usado para visualizar o histórico de commits do repositório. Isso inclui informações como o autor, data e mensagem de cada commit.</p>
+
+- Exemplo:
+```
+git log
+```
+
+### git diff: Comparando mudanças
+<p align = "justify"> &emsp;O comando <b><i>git diff</i></b> é utilizado para visualizar as diferenças entre o estado atual dos arquivos e o último commit. Isso é útil para entender as alterações feitas.</p>
+
+- Exemplo:
+```
+git diff
+```
+
+### git reset: Desfazer commits
+<p align = "justify"> &emsp;O comando <b><i>git reset</i></b>  é utilizado para desfazer commits. Ele permite mover os commits para um estado anterior e pode ser útil para corrigir erros ou reorganizar o histórico.</p>
+
+- Exemplo:
+```
+git reset HEAD~1
+```
+
+<p align = "justify"> &emsp;HEAD~1: Esta parte do comando especifica o ponto para o qual você deseja reverter. O HEAD representa o commit mais recente na branch atual, e o ~1 indica que você deseja voltar um único commit. Se você desejar voltar mais de um commit, poderá ajustar o número após o til (~).</p>
+
+<p align = "justify"> &emsp;Portanto, quando você executa git reset HEAD~1, o Git moverá a branch atual para o commit anterior, desfazendo o último commit. As alterações feitas no commit desfeito não são perdidas; elas voltam ao estado "unstaged" no diretório de trabalho, permitindo que você modifique e reconfigure as alterações antes de fazer um novo commit.</p>
+
+### Comandos para Modificar o Estado de um Arquivo
+<p align = "justify"> &emsp;Além dos comandos mencionados acima, também é possível usar git checkout para desfazer alterações não salvas em um arquivo específico e git reset para mover arquivos do estado "staged" para "unmodified" ou "modified".</p>
+
 
 <h2 id="Equipe">Equipe</h2><br>
 
