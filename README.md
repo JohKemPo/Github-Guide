@@ -65,36 +65,41 @@
         - Comandos para Modificar o Estado de um Arquivo
 
 3. [Capítulo 2: Trabalhando com Branches](#capitulo3)
-    1. [Branches no Git](#)
+    1. [Branches no Git](#branches)
         - O que é uma branch?
         - Criando e alterando branches
         - Excluindo branches
-    1. [Merges e Conflitos](#)
+    1. [Merges e Conflitos](#merges)
         - Merging de branches
         - Resolvendo conflitos de merge
         - Rebase vs. Merge
-    1. [Fluxo de Trabalho Básico](#)
+    1. [Fluxo de Trabalho Básico](#fluxo)
         - Criando e trabalhando em uma nova branch
         - Fazendo commits em uma branch
         - Merging de uma branch
 
 4. [Capítulo 3: GitHub](#capitulo4)
-    1. [Criando uma Conta no GitHub](#)
-        - Configurando seu perfil
-        - Criando uma organização (se aplicável)
-    2. [Trabalhando com Repositórios](#)
+    1. [Trabalhando com Repositórios](#repositorios)
         - Criando um novo repositório
         - Configurações do repositório
         - Clonando um repositório
         - Issues e Pull Requests
-    1. [Colaboração no GitHub](#)
+        - .gitignore
+    1. [Colaboração no GitHub](#colaboracao)
         - Colaboradores e permissões
         - Forking de repositórios
         - Trabalhando em colaboração
         - Revisão de código
-    1. [Segurança](#)
-      - Chave SSH
-      - Token
+    1. [Segurança](#seguranca)
+        - introdução
+        - Chave SSH
+          - No windows
+          - No linux
+          - No macOS
+        - Token
+          - No windows
+          - No linux
+          - No macOS
 
 5. [Capítulo 4: Dicas e Boas Práticas](#capitulo5)
     - Boas práticas de escrita de mensagens de commit
@@ -314,6 +319,167 @@ git reset HEAD~1
 ### Comandos para Modificar o Estado de um Arquivo
 <p align = "justify"> &emsp;Além dos comandos mencionados acima, também é possível usar git checkout para desfazer alterações não salvas em um arquivo específico e git reset para mover arquivos do estado "staged" para "unmodified" ou "modified".</p>
 
+<h2 id="capitulo3">rabalhando com Branches</h2>
+<h3 id="branches">Branches no Git</h3>
+### O que é uma branch?
+<p align = "justify"> &emsp;Uma branch é uma ramificação independente no Git que permite desenvolver funcionalidades ou correções de forma isolada do ramo principal (geralmente chamado de "master" ou "main"). Entretanto, é possível criar branches com quaisquer nomes, comumente com os nomes das funcionalidades especificas em desenvolvimento.</p>
+
+### Criando e alterando branches
+
+- **Criar uma branch:** Use o comando `git branch nome_da_branch` para criar uma nova branch.
+```
+git branch nome_da_branch
+```
+- **Alternar para uma branch:** Use o comando `git checkout nome_da_branch` para mudar para a branch desejada.
+```
+git checkout nome_da_branch
+```
+- **Excluir uma branch:** Use o comando `git branch -d nome_da_branch` para remover uma branch que não é mais necessária.
+```
+git branch -d nome_da_branch
+```
+
+<h3 id="merges">Merges e Conflitos</h3>
+
+**Merging de branches**
+
+<p align="justify">&emsp; O comando `git merge nome_da_branch` é usado para mesclar o conteúdo de uma branch em outra. Isso integra as alterações feitas em uma branch à branch de destino.</p>
+
+**Resolvendo conflitos de merge**
+
+<p align="justify">&emsp; Quando o Git não pode mesclar automaticamente as alterações de duas branches devido a conflitos, você precisará resolver manualmente os conflitos. Isso envolve editar os arquivos com conflitos, adicioná-los ao estágio (usando `git add`) e, em seguida, criar um novo commit.</p>
+
+**Rebase vs. Merge**
+
+<p align="justify">&emsp; O `rebase` é uma alternativa ao merge. Ele reorganiza o histórico de commits, "movendo" suas alterações para o topo da branch de destino, resultando em um histórico linear. O `merge` cria um novo commit de mesclagem, mantendo o histórico original.</p>
+
+<h3 id="fluxo">Fluxo de Trabalho Básico</h3>
+
+**Criando e trabalhando em uma nova branch**
+<p align="justify">&emsp; Use `git checkout -b nova_branch` para criar e alternar para uma nova branch em um único comando. Isso é útil ao iniciar uma nova funcionalidade ou correção.</p>
+
+**Fazendo commits em uma branch**
+<p align="justify">&emsp; Depois de alternar para uma branch, você pode fazer commits normais usando `git commit `para salvar as alterações. Os commits são específicos para a branch em que você está trabalhando.</p>
+
+**Merging de uma branch**
+<p align="justify">&emsp; Quando sua funcionalidade ou correção estiver pronta, você pode mesclá-la de volta à branch principal (por exemplo, `master` ou `main`) usando `git merge`. Isso incorpora suas alterações ao ramo principal do projeto.</p>
+
+<p align="justify">&emsp; Trabalhar com branches no Git permite um desenvolvimento organizado e colaborativo, onde várias funcionalidades ou correções podem ser desenvolvidas simultaneamente sem conflitos constantes.</p>
+
+<h3 id="repositorios">Trabalhando com Repositórios</h3>
+
+<p align="justify">&emsp; Repositórios no GitHub são a base de todo o desenvolvimento colaborativo. É onde você armazena, compartilha e colabora em projetos. </p>
+
+**Criando um Novo Repositório**
+
+Passos para criar um novo repositório no GitHub:
+1. Acesse o GitHub e faça login na sua conta.
+
+1. No canto superior direito, clique no botão "+" e escolha "Novo repositório".
+
+1. Preencha as informações do repositório:
+    - **Nome do Repositório:** Escolha um nome significativo para o seu projeto.
+    - **Descrição:** Descreva o propósito do repositório.
+    - **Visibilidade:** Pode ser público ou privado, dependendo das suas necessidades.
+    - **Inicializar com um README:** É uma boa prática marcar essa opção para criar um arquivo README inicial.
+1. Clique no botão "Criar repositório."
+
+<p align="justify">&emsp; Seu novo repositório foi criado no GitHub e está pronto para ser preenchido com seu código. Você receberá informações sobre como clonar o repositório em sua máquina local e iniciar o trabalho.</p>
+
+Configurações do Repositório
+Personalizando as configurações do repositório:
+Após criar o repositório, você pode personalizar suas configurações da seguinte forma:
+
+Configurações: Nesta seção, você pode definir configurações importantes, como opções de colaboração, acesso e configurações de segurança. Por exemplo, você pode adicionar colaboradores, definir permissões de acesso, habilitar a proteção de ramos e muito mais.
+
+Integrações: Configure integrações com outras ferramentas e serviços para automatizar fluxos de trabalho e aumentar a produtividade. O GitHub oferece uma ampla variedade de integrações, como integração contínua, rastreamento de problemas e implantação automática.
+
+Notificações: Personalize as notificações que você deseja receber sobre atividades no repositório.
+
+Colaboradores: Adicione pessoas ou equipes como colaboradores, permitindo que eles contribuam para o repositório.
+
+Segurança: Configure medidas de segurança, como verificação de Dependabot para atualizações de pacotes.
+
+Opções do GitHub Pages: Se desejar hospedar uma página da web a partir do seu repositório, você pode configurá-la aqui.
+
+Transferir repositório: Se necessário, você pode transferir a propriedade do repositório para outra conta.
+
+.gitignore: Ignorando Arquivos Indesejados
+O arquivo .gitignore é uma parte fundamental de qualquer repositório Git. Ele permite que você especifique quais arquivos e diretórios devem ser ignorados pelo Git. A importância do .gitignore reside no fato de que ele ajuda a manter o repositório limpo e a evitar o rastreamento acidental de arquivos que não devem fazer parte do controle de versão.
+
+Os tipos de arquivos que você geralmente deseja ignorar no .gitignore incluem:
+
+Arquivos de compilação.
+Arquivos temporários.
+Arquivos de sistema.
+Dependências de terceiros (por exemplo, bibliotecas).
+Ao criar um arquivo .gitignore, você pode especificar padrões de correspondência para os arquivos a serem ignorados. Por exemplo:
+
+```
+# Ignorar arquivos de compilação
+*.o
+*.out
+
+# Ignorar arquivos de configuração
+config.ini
+
+# Ignorar diretórios gerados
+build/
+```
+O uso adequado do .gitignore ajuda a manter o repositório organizado e evita que arquivos desnecessários sejam incluídos nos commits.
+
+Clonando um Repositório
+Para clonar um repositório do GitHub para sua máquina local:
+Abra o terminal (no caso do Linux ou macOS) ou use o Git Bash (no caso do Windows).
+
+Navegue até o diretório onde você deseja clonar o repositório.
+
+No GitHub, vá até o repositório que deseja clonar e clique no botão "Código."
+
+Copie a URL do repositório (por exemplo, "https://github.com/seunome/seurepo.git").
+
+No terminal, digite o seguinte comando:
+```
+git clone URL_do_Repositório
+```
+
+Agora você possui uma cópia local do repositório e pode começar a trabalhar em seus arquivos.
+
+Issues e Pull Requests
+Issues:
+As issues são usadas para rastrear problemas, sugestões, tarefas e melhorias em um repositório. Elas são úteis para manter o controle das discussões e do progresso do desenvolvimento. Para criar uma issue, siga estes passos:
+
+No repositório, vá até a guia "Issues."
+
+Clique no botão "Nova issue."
+
+Preencha os detalhes, incluindo um título descritivo e um corpo explicando o problema ou sugestão.
+
+Clique em "Criar issue."
+
+Pull Requests:
+Os pull requests são usados para propor alterações em um repositório. Eles são fundamentais para a colaboração e revisão de código. Para criar um pull request, siga estes passos:
+
+Faça as alterações desejadas em uma branch no seu repositório.
+
+No GitHub, vá até o repositório e clique na guia "Pull Requests."
+
+Clique no botão "Novo pull request."
+
+Escolha a base (a branch de destino) e a branch com suas alterações.
+
+Preencha os detalhes do pull request, incluindo um título e uma descrição.
+
+Clique em "Criar pull request."
+
+Agora outros colaboradores podem revisar suas alterações, fazer comentários e, quando estiverem prontos, mesclar as alterações no repositório principal.
+
+Trabalhar com repositórios no GitHub é fundamental para o desenvolvimento colaborativo. Você pode criar, configurar e colaborar em projetos de software de forma eficaz, controlando seu código e facilitando a comunicação entre membros da equipe.
+
+Se você tiver mais perguntas específicas sobre como trabalhar com repositórios no GitHub ou a importância do .gitignore, sinta-se à vontade para perguntar.
+
+1. [Colaboração no GitHub](#colaboracao)
+1. [Segurança](#seguranca)
 
 <h2 id="Equipe">Equipe</h2><br>
 
