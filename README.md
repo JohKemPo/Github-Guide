@@ -532,7 +532,7 @@ git push origin minha_branch
 
 <p align="justify">&emsp;As chaves SSH são uma maneira segura de autenticar-se no GitHub. Elas são usadas para estabelecer uma conexão segura entre seu computador e o GitHub. Abaixo estão instruções para configurar chaves SSH no Windows, Linux e macOS.</p>
 
-**No Windows**
+**[No Windows](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=windows)**
 
 1. Gerando uma Chave SSH:
 
@@ -550,7 +550,7 @@ git push origin minha_branch
     - Use cat ~/.ssh/sua_chave_publica.pub para exibir a chave pública.
     - Copie a chave e adicione-a às configurações do SSH no GitHub.
 
-**No Linux**
+**[No Linux(https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux)]**
 
 1. Gerando uma Chave SSH:
 
@@ -568,7 +568,7 @@ git push origin minha_branch
     - Use cat ~/.ssh/sua_chave_publica.pub para exibir a chave pública.
     - Copie a chave e adicione-a às configurações do SSH no GitHub.
 
-**No macOS**
+**[No macOS](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=mac)**
 
 <p align="justify">&emsp;O processo para gerar e adicionar chaves SSH no macOS é semelhante ao do Linux. Você pode seguir as instruções acima para o Linux no macOS.</p>
 
