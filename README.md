@@ -96,34 +96,9 @@
           - No windows
           - No linux
           - No macOS
-        - Token
-          - No windows
-          - No linux
-          - No macOS
 
-5. [Capítulo 4: Dicas e Boas Práticas](#capitulo5)
-    - Boas práticas de escrita de mensagens de commit
-    - Organização de commits
-    - Uso eficiente de branches
-    - Mantendo um repositório limpo
-
-## Apêndices
-
-1. [Apêndice A: Solução de Problemas Avançados](#appendix-a)
-    - Erros de Git
-    - Problemas de Conflitos
-    - Problemas de Desempenho
-    - Problemas de Autenticação
-    - Problemas de Configuração
-    - Problemas de Gerenciamento de Branches
-    - Problemas de Integração de Terceiros
-
-2. [Apêndice B: Referências Adicionais e Leitura Recomendada](#appendix-b)
-    - Recursos adicionais
-
-3. [Apêndice C: Links Úteis para Recursos, Plugins e Extensões](#appendix-c)
-    - Recursos adicionais online
-
+5. [Apêndice ](#apendice)
+    - Guia de Markdown
 </div>
 
 
@@ -364,9 +339,11 @@ git branch -d nome_da_branch
 <h2 id="fluxo">Fluxo de Trabalho Básico</h2>
 
 ### Criando e trabalhando em uma nova branch
+
 <p align="justify">&emsp; Use `git checkout -b nova_branch` para criar e alternar para uma nova branch em um único comando. Isso é útil ao iniciar uma nova funcionalidade ou correção.</p>
 
 ### Fazendo commits em uma branch
+
 <p align="justify">&emsp; Depois de alternar para uma branch, você pode fazer commits normais usando `git commit `para salvar as alterações. Os commits são específicos para a branch em que você está trabalhando.</p>
 
 ### Merging de uma branch
@@ -374,6 +351,7 @@ git branch -d nome_da_branch
 
 <p align="justify">&emsp; Trabalhar com branches no Git permite um desenvolvimento organizado e colaborativo, onde várias funcionalidades ou correções podem ser desenvolvidas simultaneamente sem conflitos constantes.</p>
 
+<h2 id="capitulo4">Github</h2>
 <h2 id="repositorios">Trabalhando com Repositórios</h2>
 
 <p align="justify">&emsp; Repositórios no GitHub são a base de todo o desenvolvimento colaborativo. É onde você armazena, compartilha e colabora em projetos. </p>
@@ -560,10 +538,68 @@ git push origin minha_branch
 <p align="justify">&emsp;Essa abordagem ajuda a manter a qualidade do código e a promover a colaboração eficaz entre membros da equipe ou da comunidade.</p>
 
 
+<h2 id="seguranca">Segurança</h2>
 
-1. [Segurança](#seguranca)
 
-<h2 id="Equipe">Equipe</h2><br>
+<p align="justify">&emsp;A segurança é uma consideração fundamental ao usar o GitHub. Proteger seu acesso e suas credenciais é essencial para manter seus repositórios e dados seguros. Nesta seção, abordaremos tópicos relacionados à segurança no GitHub.</p>
+
+### **Introdução**
+
+<p align="justify">&emsp;A segurança no GitHub abrange várias áreas, desde o acesso à autenticação até o gerenciamento de permissões. É importante garantir que seu ambiente GitHub seja seguro para evitar vulnerabilidades e garantir a integridade de seus projetos.</p>
+
+### **Chave SSH**
+
+<p align="justify">&emsp;As chaves SSH são uma maneira segura de autenticar-se no GitHub. Elas são usadas para estabelecer uma conexão segura entre seu computador e o GitHub. Abaixo estão instruções para configurar chaves SSH no Windows, Linux e macOS.</p>
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+**No Windows**
+
+1. Gerando uma Chave SSH:
+
+    - Abra o Git Bash ou PowerShell no Windows.
+    - Use o comando ssh-keygen para gerar uma chave SSH.
+    - Siga as instruções para configurar uma senha para a chave, se desejar.
+
+1. Adicionando a Chave SSH ao Agente SSH:
+
+    - Execute o agente SSH com o comando eval $(ssh-agent -s).
+    - Adicione sua chave privada ao agente com ssh-add ~/.ssh/sua_chave_privada.
+
+1. Copiando a Chave Pública para o GitHub:
+
+    - Use cat ~/.ssh/sua_chave_publica.pub para exibir a chave pública.
+    - Copie a chave e adicione-a às configurações do SSH no GitHub.
+
+**No Linux**
+
+1. Gerando uma Chave SSH:
+
+    - Abra um terminal no Linux.
+    - Use o comando ssh-keygen para gerar uma chave SSH.
+    - Siga as instruções para configurar uma senha para a chave, se desejar.
+
+1. Adicionando a Chave SSH ao Agente SSH:
+
+    - Execute o agente SSH com o comando eval $(ssh-agent -s).
+    - Adicione sua chave privada ao agente com ssh-add ~/.ssh/sua_chave_privada.
+
+1. Copiando a Chave Pública para o GitHub:
+
+    - Use cat ~/.ssh/sua_chave_publica.pub para exibir a chave pública.
+    - Copie a chave e adicione-a às configurações do SSH no GitHub.
+
+**No macOS**
+
+<p align="justify">&emsp;O processo para gerar e adicionar chaves SSH no macOS é semelhante ao do Linux. Você pode seguir as instruções acima para o Linux no macOS.</p>
+
+<h2 id="apendice">Apêndice </h2>
+
+### **Guia prático de marckdown**
+
+[Repositório](Markdown.md)
+
+<p align="justify">&emsp;O Markdown foi criado por John Gruber e Aaron Swartz em 2004, com o objetivo de permitir a escrita de texto com formatação fácil de ler e escrever, que pode ser convertido em HTML e outros formatos.</p>
 
 <div align="center">
 
