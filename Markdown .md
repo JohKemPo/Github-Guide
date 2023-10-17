@@ -226,6 +226,7 @@ def hello():
 
 
 
+<br>
 <h1 id="Equipe">Equipe</h1><br>
 
 <div align="center">
@@ -233,3 +234,4 @@ def hello():
 |     Desenvolvedor              |           GitHub             |       LinkedIn     |
 |--------------------------------|------------------------------|--------------------|
 |👤 João Vitor Moraes            |<https://github.com/JohKemPo>   |<https://www.linkedin.com/in/joao-vitor-de-moraes/>|
+</div>
