@@ -550,7 +550,7 @@ git push origin minha_branch
     - Use cat ~/.ssh/sua_chave_publica.pub para exibir a chave pública.
     - Copie a chave e adicione-a às configurações do SSH no GitHub.
 
-**[No Linux(https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux)]**
+**[No Linux](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux)**
 
 1. Gerando uma Chave SSH:
 
