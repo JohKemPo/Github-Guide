@@ -536,37 +536,46 @@ git push origin minha_branch
 
 1. Gerando uma Chave SSH:
 
-    - Abra o Git Bash ou PowerShell no Windows.
-    - Use o comando ssh-keygen para gerar uma chave SSH.
-    - Siga as instruções para configurar uma senha para a chave, se desejar.
-
-1. Adicionando a Chave SSH ao Agente SSH:
-
-    - Execute o agente SSH com o comando eval $(ssh-agent -s).
-    - Adicione sua chave privada ao agente com ssh-add ~/.ssh/sua_chave_privada.
-
-1. Copiando a Chave Pública para o GitHub:
-
-    - Use cat ~/.ssh/sua_chave_publica.pub para exibir a chave pública.
-    - Copie a chave e adicione-a às configurações do SSH no GitHub.
+    - Abra Git Bash.
+    - Cole o texto abaixo, substituindo o endereço de e-mail pelo seu GitHub.
+        ```
+        ssh-keygen -t ed25519 -C "your_email@example.com"
+        ```
+    - No prompt, digite uma senha segura. 
+    - Copie a chave pública SSH para a sua área de transferência.
+        ```
+        cat "caminho da chame publica"
+        # ~/.ssh/id_ed11111.pub EXEMPLO
+        ```
+    - Na página "Settings" do github, clique em "SSH and GPG keys" (Chaves SSH e GPG) no menu lateral esquerdo.
+    - Clique em "New SSH key" (Nova chave SSH).
+    - No campo "Title" (Título), dê um nome descritivo para sua chave.
+    - No campo "Key" (Chave), cole a chave pública que você copiou anteriormente.
+    - Clique em "Add SSH key" (Adicionar chave SSH) para salvar a chave.
 
 **[No Linux](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux)**
 
 1. Gerando uma Chave SSH:
 
     - Abra um terminal no Linux.
-    - Use o comando ssh-keygen para gerar uma chave SSH.
+    - Cole o texto abaixo, substituindo o endereço de e-mail pelo seu GitHub.
+
+        ```
+        ssh-keygen -t ed25519 -C "your_email@example.com"
+        ```
     - Siga as instruções para configurar uma senha para a chave, se desejar.
-
-1. Adicionando a Chave SSH ao Agente SSH:
-
-    - Execute o agente SSH com o comando eval $(ssh-agent -s).
-    - Adicione sua chave privada ao agente com ssh-add ~/.ssh/sua_chave_privada.
 
 1. Copiando a Chave Pública para o GitHub:
 
-    - Use cat ~/.ssh/sua_chave_publica.pub para exibir a chave pública.
+    - Use `cat ~/.ssh/sua_chave_publica.pub` para exibir a chave pública.
     - Copie a chave e adicione-a às configurações do SSH no GitHub.
+    Acesse sua conta no GitHub (github.com) e navegue até "Settings" (Configurações) no menu de perfil.
+    - Copie a saída do comando, que é a chave pública.
+    - Na página "Settings" do github, clique em "SSH and GPG keys" (Chaves SSH e GPG) no menu lateral esquerdo.
+    - Clique em "New SSH key" (Nova chave SSH).
+    - No campo "Title" (Título), dê um nome descritivo para sua chave.
+    - No campo "Key" (Chave), cole a chave pública que você copiou anteriormente.
+    - Clique em "Add SSH key" (Adicionar chave SSH) para salvar a chave.
 
 **[No macOS](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=mac)**
 
