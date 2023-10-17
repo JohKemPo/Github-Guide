@@ -597,7 +597,7 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generati
 
 ### **Guia prático de marckdown**
 
-[Repositório](Markdown.md)
+[Repositório](https://github.com/JohKemPo/Github-Guide/blob/main/Markdown%20.md)
 
 <p align="justify">&emsp;O Markdown foi criado por John Gruber e Aaron Swartz em 2004, com o objetivo de permitir a escrita de texto com formatação fácil de ler e escrever, que pode ser convertido em HTML e outros formatos.</p>
 
