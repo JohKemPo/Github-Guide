@@ -1,25 +1,5 @@
 
-<!-- <a href="https://github.com/anuraghazra/github-readme-stats"> github-readme-stats </a><br>
-<a href="https://github.com/tandpfun/skill-icons"> skill-icons </a><br>
-<a href="https://github.com/VishwaGauravIn/pretty-readme-badges"> pretty-readme-badges </a><br>
-<a href="https://github.com/alexandresanlim/Badges4-README.md-Profile"> Badges4-README.md-Profile </a><br>
-<a href="https://github.com/anuraghazra/github-readme-stats"> github-readme-stats</a><br>
-<a href="https://github.com/vn7n24fzkq/github-profile-summary-cards"> github-profile-summary-cards </a><br>
-<a href="https://github.com/ryo-ma/github-profile-trophy"> github-profile-trophy</a><br>
-<a href="https://github.com/DenverCoder1/github-readme-streak-stats"> github-readme-streak-stats </a><br>
-<a href="https://github.com/Ashutosh00710/github-readme-activity-graph"> readme-activity-graph </a><br>
-<a href="https://github.com/luong-komorebi/Markdown-Tutorial/blob/master/README_pt-BR.md">Markdown Tutorial </a><br>
-<a href="https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks"> rCriar e realçar blocos de código</a><br>
-<https://github.com/iuricode/padroes-de-commits><br>
-<https://medium.com/linkapi-solutions/conventional-commits-pattern-3778d1a1e657><br>
-<https://blog.betrybe.com/git/git-branch/><br>
-<https://www.conventionalcommits.org/en/v1.0.0/#summary><br>
- -->
-
-
 <div align="center">
-  <!-- <img src="images/2.png"width=" 80px">
-  <img src="images/3.png"width=" 80px"> -->
   <img src="images/4.png"width=" 120px">
   <img src="images/1.png"width=" 120px">
   <h1>Guia prático de Git e Github</h1>
@@ -99,6 +79,7 @@
 
 5. [Apêndice ](#apendice)
     - Guia de Markdown
+    - Material complementar
 </div>
 
 
@@ -551,8 +532,6 @@ git push origin minha_branch
 
 <p align="justify">&emsp;As chaves SSH são uma maneira segura de autenticar-se no GitHub. Elas são usadas para estabelecer uma conexão segura entre seu computador e o GitHub. Abaixo estão instruções para configurar chaves SSH no Windows, Linux e macOS.</p>
 
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-
 **No Windows**
 
 1. Gerando uma Chave SSH:
@@ -597,10 +576,31 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generati
 
 ### **Guia prático de marckdown**
 
-[Repositório](https://github.com/JohKemPo/Github-Guide/blob/main/Markdown%20.md)
+[Link para o repositório completo](https://github.com/JohKemPo/Github-Guide/blob/main/Markdown%20.md)
 
 <p align="justify">&emsp;O Markdown foi criado por John Gruber e Aaron Swartz em 2004, com o objetivo de permitir a escrita de texto com formatação fácil de ler e escrever, que pode ser convertido em HTML e outros formatos.</p>
 
+### **Material complementar**
+
+<p align="justify">&emsp;Material de consulta em geral sobre personalização de readme e dicas</p>
+
+- [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)
+- [skill-icons](https://github.com/tandpfun/skill-icons)
+- [pretty-readme-badges](https://github.com/VishwaGauravIn/pretty-readme-badges)
+- [Badges4-README.md-Profile](https://github.com/alexandresanlim/Badges4-README.md-Profile)
+- [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)
+- [github-profile-summary-cards](https://github.com/vn7n24fzkq/github-profile-summary-cards)
+- [github-profile-trophy](https://github.com/ryo-ma/github-profile-trophy)
+- [github-readme-streak-stats](https://github.com/DenverCoder1/github-readme-streak-stats)
+- [readme-activity-graph](https://github.com/Ashutosh00710/github-readme-activity-graph)
+- [Markdown Tutorial](https://github.com/luong-komorebi/Markdown-Tutorial/blob/master/README_pt-BR.md)
+- [Criar e realçar blocos de código](https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks)
+- [padrões-de-commits](https://github.com/iuricode/padroes-de-commits)
+- [Conventional Commits Pattern](https://medium.com/linkapi-solutions/conventional-commits-pattern-3778d1a1e657)
+- [Git Branch](https://blog.betrybe.com/git/git-branch/)
+- [Conventional Commits Specification](https://www.conventionalcommits.org/en/v1.0.0/#summary)
+
+<br>
 <div align="center">
 
 |     Desenvolvedor              |           GitHub             |       LinkedIn     |
