@@ -601,8 +601,11 @@ git push origin minha_branch
 - [Conventional Commits Specification](https://www.conventionalcommits.org/en/v1.0.0/#summary)
 
 <br>
+<h1 id="Equipe">Equipe</h1><br>
+
 <div align="center">
 
 |     Desenvolvedor              |           GitHub             |       LinkedIn     |
 |--------------------------------|------------------------------|--------------------|
 |👤 João Vitor Moraes            |<https://github.com/JohKemPo>   |<https://www.linkedin.com/in/joao-vitor-de-moraes/>|
+</div>
