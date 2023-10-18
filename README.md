@@ -608,7 +608,10 @@ git push origin minha_branch
 - [Conventional Commits Pattern](https://medium.com/linkapi-solutions/conventional-commits-pattern-3778d1a1e657)
 - [Git Branch](https://blog.betrybe.com/git/git-branch/)
 - [Conventional Commits Specification](https://www.conventionalcommits.org/en/v1.0.0/#summary)
-
+- [Github status readme](https://github.com/anuraghazra/github-readme-stats)
+- [Markdown tutorial](https://github.com/luong-komorebi/Markdown-Tutorial)
+- [Badges readme](https://github.com/alexandresanlim/Badges4-README.md-Profile)
+  
 <br>
 <h1 id="Equipe">Equipe</h1><br>
 
