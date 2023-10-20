@@ -38,6 +38,8 @@
         - git clone: Clonando um repositório
         - git add: Adicionando alterações ao Staging area
         - git commit: Criando um commit
+        - git pull: Sincronizar seu Repositório Local com o Remoto
+        - git push: Envia as alterações ao repositório remoto.
         - git status: Verificando o status do repositório
         - git log: Visualizando o histórico de commits
         - git diff: Comparando mudanças
@@ -192,7 +194,31 @@ git --version
 <h2 id="funfamental">Conceitos Fundamentais do Git</h2>
 <p align = "justify"> &emsp; O Git é baseado em alguns conceitos fundamentais que são essenciais para entender como ele funciona:</p>
 
-- **Repositórios Git:** Um repositório Git é um diretório que contém todos os arquivos do seu projeto, juntamente com um banco de dados especial para rastrear as alterações (histórico).
+- **Repositórios Git:** Um repositório Git é um diretório que contém todos os arquivos do seu projeto, juntamente com um banco de dados especial para rastrear as alterações (histórico). 
+
+    ### **Repositório Local:**
+
+    <p align = "justify"> &emsp;Um repositório local é um diretório em seu computador onde você armazena todos os arquivos e informações relacionadas a um projeto Git. Ele contém:</p>
+
+    - **Working Directory (Diretório de Trabalho):** O diretório no seu computador onde você cria, edita e organiza seus arquivos de projeto.
+
+    - **Área de Staging (ou Index):** Uma área intermediária onde você prepara as alterações que deseja confirmar (commit) no repositório. Isso permite que você selecione quais alterações serão incluídas no próximo commit.
+
+    - **Histórico de Commits:** Uma série de snapshots (instantâneos) das versões do seu projeto. Cada commit contém informações sobre as alterações feitas, o autor e uma identificação única.
+
+    - **Branches:** Divisões no histórico de commits que permitem que você trabalhe em diferentes linhas de desenvolvimento sem afetar o branch principal (geralmente chamado de "master" ou "main"). Você pode criar, mesclar e alternar entre branches no seu repositório local.
+
+    ### **Repositório Remoto:**
+
+    <p align = "justify"> &emsp;Um repositório remoto é um repositório Git armazenado em um servidor remoto (como GitHub, GitLab, Bitbucket ou um servidor próprio). Ele contém:</p>
+
+    - **Histórico de Commits Remotos:** Uma cópia do histórico de commits do projeto, incluindo todas as alterações confirmadas por outros colaboradores.
+
+    - **Controle de Acesso:** O repositório remoto geralmente possui configurações de controle de acesso, como permissões de leitura e gravação, que determinam quem pode visualizar e contribuir para o projeto.
+
+    - **Colaboração:** O repositório remoto permite que várias pessoas colaborem em um projeto. Os desenvolvedores podem clonar (copiar) o repositório remoto para seus computadores locais, fazer alterações e, em seguida, enviar essas alterações de volta para o repositório remoto. Isso permite uma colaboração eficiente em projetos de equipe.
+
+    - **Backup e Distribuição:** O repositório remoto serve como um local centralizado para armazenar e fazer backup de todo o histórico de commits do projeto. Também facilita a distribuição do código para outros desenvolvedores.
 
 - **Commits:** Um commit é um snapshot do estado do seu projeto em um determinado momento. Cada commit tem uma mensagem descritiva que explica o que foi alterado.
 
@@ -241,6 +267,32 @@ git add .
 ```
 git commit -m "Mensagem do commit"
 ```
+
+### git pull: Sincronizar seu Repositório Local com o Remoto
+<p align = "justify"> &emsp;O comando <b><i>git pull</i></b> usado para sincronizar seu repositório local com o repositório remoto para garantir que você esteja trabalhando com as informações mais atualizadas. Use o comando <b><i>git</b></i> pull para puxar as mudanças do repositório remoto e mesclá-las com o seu repositório local.</p>
+
+- Exemplo:
+```
+git pull origin main
+```
+
+### git push: Enviando alterações ao remoto
+<p align = "justify"> &emsp;Depois de comitar suas alterações e sincronizar seu repositório local, você está pronto para enviar as alterações para o repositório remoto. Use o comando <b><i>git push</i></b> seguido do nome do repositório remoto (por padrão, "origin") e o nome da ramificação que deseja atualizar.</p>
+
+- Exemplo:
+```
+git push origin main
+```
+
+**Explicando melhor:**
+
+- **git push:** Este é o comando principal para enviar suas alterações (commits) locais para um repositório remoto. Ele sincroniza as alterações locais com o repositório remoto.
+
+- **-u (ou --set-upstream):** A opção -u é usada para definir o controle remoto padrão para o branch local. Isso é útil para que você possa usar `git pull` e `git push` posteriormente sem especificar o controle remoto e o branch toda vez. O `origin` e o `main` no comando indicam o nome do controle remoto e o nome do branch para o qual você está enviando suas alterações.
+
+- **origin:** É o nome do controle remoto. O controle remoto é uma referência ao repositório remoto, que é geralmente hospedado em uma plataforma como GitHub, GitLab, Bitbucket, etc. O nome `origin` é um nome comum para o controle remoto principal, mas você pode dar a ele o nome que preferir.
+
+- **main:** É o nome do branch que você está enviando para o repositório remoto. 
 
 ### git status: Verificando o status do repositório
 <p align = "justify"> &emsp;O comando <b><i>git status</i></b> permite verificar o estado atual do repositório, mostrando quais arquivos foram modificados, adicionados ao Staging area ou estão não rastreados.</p>
