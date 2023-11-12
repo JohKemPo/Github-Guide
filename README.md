@@ -78,6 +78,7 @@
           - No windows
           - No linux
           - No macOS
+    1. [Multiplos usuários git na mesma máquina](#multiplos)
 
 5. [Apêndice ](#apendice)
     - Guia de Markdown
@@ -353,6 +354,33 @@ git checkout nome_da_branch
 - **Excluir uma branch:** Use o comando `git branch -d nome_da_branch` para remover uma branch que não é mais necessária.
 ```
 git branch -d nome_da_branch
+```
+
+### Criando a partir de outra
+
+- **Certifique-se de estar na branch de origem:**
+
+```
+git checkout nome-da-branch-de-origem
+```
+- **Crie uma nova branch a partir da branch de origem:**
+
+```
+git checkout -b nome-da-nova-branch
+```
+Isso cria uma nova branch e a seleciona automaticamente.
+
+- **Faça as alterações necessárias e adicione-as ao controle de versão:**
+
+```
+git add .
+git commit -m "Mensagem do commit"
+```
+
+- **Publique a nova branch no repositório remoto:**
+
+```
+git push origin nome-da-nova-branch
 ```
 
 <h2 id="merges">Merges e Conflitos</h2>
@@ -646,6 +674,81 @@ git push origin minha_branch
 **[No macOS](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=mac)**
 
 <p align="justify">&emsp;O processo para gerar e adicionar chaves SSH no macOS é semelhante ao do Linux. Você pode seguir as instruções acima para o Linux no macOS.</p>
+
+
+<h2 id="multiplos">Multiplos usuários git na mesma máquina</h2>
+
+1. Crie Chaves SSH para cada conta
+1. Publique as chaves nos respectivos Gihub
+1. Crie um arquivo de configuração e determine as informações host
+
+### **Criando chaves ssh - relembrando**
+
+- **Crie as chaves ssh para cada usuário:**
+
+Não se esqueça de diferenciar os nomes das chaves geradas
+
+```
+ssh-keygen -t rsa -C "email" -f "nome-chave-usuario-1"
+ssh-keygen -t rsa -C "email" -f "nome-chave-usuario-2"
+...
+```
+
+- No prompt, digite uma senha segura. 
+    - Copie a chave pública SSH para a sua área de transferência.
+        ```
+        cat "caminho da chame publica"
+        # ~/.ssh/id_ed11111.pub EXEMPLO
+        ```
+    - Na página "Settings" do github, clique em "SSH and GPG keys" (Chaves SSH e GPG) no menu lateral esquerdo.
+    - Clique em "New SSH key" (Nova chave SSH).
+    - No campo "Title" (Título), dê um nome descritivo para sua chave.
+    - No campo "Key" (Chave), cole a chave pública que você copiou anteriormente.
+    - Clique em "Add SSH key" (Adicionar chave SSH) para salvar a chave.
+
+- **Certifique-se de as chaves publicas e privadas estarem na pasta `.ssh`**
+
+Caso ela não exita crie e salve as chaves nela.
+
+- **No diretório `.ssh` crie o arquivo `config`**
+
+```
+touch config
+```
+
+- **Edite o arquivo `config`:**
+
+```
+open config
+```
+
+- **Configure os respectivos dados HOST:**
+
+```
+#Informações da conta 1
+Host github.com-conta1
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github-conta1
+
+#Informações da conta 2
+Host github.com-conta2
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github-conta2
+```
+
+- **Clonando repositorio:**
+
+Agora esta tudo configurado! Basta clonar o respositório desejado:
+
+```
+git clone git@github.com-{seu-username}:{user-name-do-repositorio}/{nome-do-repositorio}.git
+
+# EXEMPLO
+git clone git@github.com-conta1:usuario-1/TestRepo.git
+```
+
 
 <h2 id="apendice">Apêndice </h2>
 
